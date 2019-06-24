@@ -1,0 +1,24 @@
+{
+  "name": "24.2-tests-jump-points",
+  "version": "1.0.0",
+  "description": "Kodilla task 24.5 - Tests: Counting points for jumps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arti-zachara/24.2-tests-jump-points.git"
+  },
+  "keywords": [
+    "counting",
+    "points",
+    "tests"
+  ],
+  "author": "arti Zachara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arti-zachara/24.2-tests-jump-points/issues"
+  },
+  "homepage": "https://github.com/arti-zachara/24.2-tests-jump-points#readme"
+}
