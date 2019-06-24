@@ -1,3 +1,5 @@
+"use strict";
+
 const calculateStylePoints = styleNotes => {
   const stylePoints = styleNotes;
 

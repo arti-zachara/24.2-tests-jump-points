@@ -1,3 +1,5 @@
+"use strict";
+
 const calculateDistancePoints = require("./calculateDistancePoints");
 const calculateStylePoints = require("./calculateStylePoints");
 

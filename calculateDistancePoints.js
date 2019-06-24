@@ -1,3 +1,5 @@
+"use strict";
+
 const calculateDistancePoints = (distance, hillSize, kPoint) => {
   if (!distance || !hillSize || !kPoint) {
     throw Error("There is at least one undefined argument");
