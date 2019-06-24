@@ -2,6 +2,18 @@ const assert = require("assert");
 const calculateStylePoints = require("./calculateStylePoints");
 
 describe("Style Points", () => {
+  it("should not allow stylePoints other than an array", () => {
+    const expected = TypeError;
+
+    assert.throws(() => calculateStylePoints("notAnArray"), expected);
+  });
+
+  it("should not allow stylePoints array to be of a different length than 5", () => {
+    const expected = Error;
+
+    assert.throws(() => calculateStylePoints([6, 8]), expected);
+  });
+
   it("should allow all the notes to be the same", () => {
     const actual = calculateStylePoints([15, 15, 15, 15, 15]);
 
