@@ -1,4 +1,5 @@
 "use strict";
+const hills = require("./hills");
 
 const calculateDistancePoints = (distance, hillSize, kPoint) => {
   if (!distance || !hillSize || !kPoint) {
@@ -14,13 +15,13 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
       .trim()
       .toLowerCase()
   ) {
-    case "normal":
+    case hills.normal:
       return 60 + pointsDifferenceNormal;
 
-    case "large":
+    case hills.large:
       return 60 + pointsDifferenceLarge;
 
-    case "flying":
+    case hills.flying:
       return 120 + pointsDifferenceFlying;
 
     default:

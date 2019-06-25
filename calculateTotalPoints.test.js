@@ -1,11 +1,12 @@
 const assert = require("assert");
 const calculateTotalPoints = require("./calculateTotalPoints");
+const hills = require("./hills");
 
 describe("Total Points", () => {
   it("should allow additional points to be positive).", () => {
     const actual = calculateTotalPoints(
       182,
-      "flying",
+      hills.flying,
       200,
       [17, 17.5, 17, 17.5, 17],
       26.1,
@@ -20,7 +21,7 @@ describe("Total Points", () => {
   it("should allow additional points to be negative).", () => {
     const actual = calculateTotalPoints(
       136,
-      "large",
+      hills.large,
       120,
       [20, 19.5, 19.5, 20, 20],
       -14,
@@ -35,7 +36,7 @@ describe("Total Points", () => {
   it("should allow additional points to be: one negative, one positive).", () => {
     const actual = calculateTotalPoints(
       111,
-      "normal",
+      hills.normal,
       98,
       [19, 19.5, 19, 19, 19],
       -14.4,
