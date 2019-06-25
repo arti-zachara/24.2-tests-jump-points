@@ -1,5 +1,21 @@
 "use strict";
 
+const removeMinMaxAndSum = notes => {
+  const scopeBeginingIndex = 1;
+  const scopeCeilIndex = 4;
+
+  const result = notes
+    .sort((a, b) => {
+      return a - b;
+    })
+    .slice(scopeBeginingIndex, scopeCeilIndex)
+    .reduce((acc, cur) => {
+      return acc + cur;
+    });
+
+  return result;
+};
+
 const calculateStylePoints = styleNotes => {
   if (!Array.isArray(styleNotes)) {
     throw TypeError("styleNotes has to be an array");
@@ -7,14 +23,7 @@ const calculateStylePoints = styleNotes => {
   if (styleNotes.length !== 5) {
     throw Error("5 style Notes are needed");
   }
-  const stylePoints = styleNotes
-    .sort((a, b) => {
-      return a - b;
-    })
-    .slice(1, 4)
-    .reduce((acc, cur) => {
-      return acc + cur;
-    });
+  const stylePoints = removeMinMaxAndSum(styleNotes);
 
   return stylePoints;
 };
