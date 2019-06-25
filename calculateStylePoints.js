@@ -1,9 +1,6 @@
 "use strict";
 
 const calculateStylePoints = styleNotes => {
-  // const cutMinMaxValues = function() {
-
-  // };
   if (!Array.isArray(styleNotes)) {
     throw TypeError("styleNotes has to be an array");
   }

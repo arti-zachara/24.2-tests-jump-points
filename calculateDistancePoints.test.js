@@ -76,4 +76,22 @@ describe("Distance Points", () => {
       assert.strictEqual(actual, expected);
     });
   });
+
+  describe("Hill's names", () => {
+    it("should allow capital leters in a hill name", () => {
+      const actual = calculateDistancePoints(208.5, "FlyinG", 200);
+
+      const expected = 130.2; //stoch
+
+      assert.strictEqual(actual, expected);
+    });
+
+    it("should allow spaces before and after a hill name", () => {
+      const actual = calculateDistancePoints(134, " large ", 120);
+
+      const expected = 85.2; //stoch
+
+      assert.strictEqual(actual, expected);
+    });
+  });
 });
