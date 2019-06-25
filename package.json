@@ -4,7 +4,8 @@
   "description": "Kodilla task 24.5 - Tests: Counting points for jumps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha *.test.js",
+    "test:watch": "onchange \"./*.js\" -- npm test"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/arti-zachara/24.2-tests-jump-points/issues"
   },
-  "homepage": "https://github.com/arti-zachara/24.2-tests-jump-points#readme"
+  "homepage": "https://github.com/arti-zachara/24.2-tests-jump-points#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "onchange": "^6.0.0"
+  }
 }
